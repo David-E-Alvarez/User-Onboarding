@@ -1,15 +1,16 @@
 import React from "react";
-import { Formik } from 'formik';
+import { withFormik } from 'formik';
 
-const Form = () => {
+const Form = (props) => {
+    console.log("props.name: " + props.name);
     return (
         <div className="formDiv">
-            <h1>Form.js</h1>
-            <Formik>
-                
-            </Formik>
+            <h1>Form.js(with Formik!)</h1>
+           
         </div>
     );
 }
+const FormikForm = withFormik({
 
-export default Form;
+})(Form);
+export default FormikForm;
